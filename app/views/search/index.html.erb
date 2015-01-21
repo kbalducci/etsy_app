@@ -1,5 +1,5 @@
 <!-- name, a price, a list of its materials, and a link back to the original listing. -->
-<h1>Etsy Search</h1>
+<h1>Etsy With Ease</h1>
 <%= form_tag('/', method: 'get') do %>
   <%= search_field_tag('query') %>
   <%= submit_tag("Keyword Search") %>
@@ -7,9 +7,10 @@
 <ul>
   <% @items.each do |item| %>
     <li>Item Name: <%= item["title"] %><br />
-        Price: <%= item["price"] %><br />
-        Materials: <%= item["materials"]%> <br />
-        <a href='<%= item["url"] %>' > Item url </a>
+        <p>Description: <%= item["description"] %></p><br />
+        <div class='price'>Price: $<%= item["price"] %></div><br />
+        <div class='materials'>Materials: <%= item["materials"].to_s %></div><br />
+        <div class='link'><a href='<%= item["url"] %>' > Item url </a></div>
 
 <!--       <img src='<%= item["thumbnailImage"] %>' />
       <div class='price'>
