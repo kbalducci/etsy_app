@@ -1,9 +1,12 @@
 <!-- name, a price, a list of its materials, and a link back to the original listing. -->
-<h1>Etsy With Ease</h1>
-<%= form_tag('/', method: 'get') do %>
-  <%= search_field_tag('query') %>
-  <%= submit_tag("Keyword Search") %>
+<header>
+  <h1>Etsy With Ease</h1>
+  <%= form_tag('/', method: 'get') do %>
+    <%= search_field_tag('query') %>
+    <div class='button'><%= submit_tag("Keyword Search") %></div>
+    <div class='border'></div>
 <% end %>
+</header>
 <ul>
   <% @items.each do |item| %>
     <li><div class='term'>Item Name </div><div class='link'><a href='<%= item["url"] %>' > Item url </a></div><div class="item_name"><%= item["title"] %></div>

@@ -2,6 +2,7 @@ body {
   font-family: helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin-left: 15%;
   margin-right: 15%;
+  background-color: #f5f5f1
 }
 
 h1 {
@@ -19,5 +20,16 @@ ul li {
 .paragraph {
   font-style: italic;
 }
+
+.button {
+  display: inline-block
+}
+
+.border {
+    margin-top: 5px;
+    background-color: #54acc7;
+    height: 5px;
+}
+
 
 
