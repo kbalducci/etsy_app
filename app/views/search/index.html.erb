@@ -6,21 +6,11 @@
 <% end %>
 <ul>
   <% @items.each do |item| %>
-    <li>Item Name: <%= item["title"] %><br />
-        <p>Description: <%= item["description"] %></p><br />
-        <div class='price'>Price: $<%= item["price"] %></div><br />
-        <div class='materials'>Materials: <%= item["materials"].to_s %></div><br />
-        <div class='link'><a href='<%= item["url"] %>' > Item url </a></div>
-
-<!--       <img src='<%= item["thumbnailImage"] %>' />
-      <div class='price'>
-        Price: <strong>$<%= item["salePrice"] %></strong>
-        <%= "$#{item["msrp"]}" if item ["msrp"] %>
-        <% if item["salePrice"].to_i < item["msrp"].to_i %>
-          <br/><small>Wow! What savings~!</small>
-          <% end %>
-      </div>
-      <p><%= item["shortDescription"] %></p> -->
+    <li><div class='term'>Item Name </div><div class='link'><a href='<%= item["url"] %>' > Item url </a></div><div class="item_name"><%= item["title"] %></div>
+        <p><div class='term'>Description: </div><div class='paragraph'><%= item["description"] %></div></p><br />
+        <div class='term'>Materials: </div><div class='materials'><%= item["materials"].to_s %></div><br />
+        <div class='term'>Price: </div><div class='price'>$<%= item["price"] %></div><br />
+        <hr/>
     </li>
     <% end %>
 </ul>
