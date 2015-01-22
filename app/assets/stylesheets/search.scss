@@ -9,8 +9,20 @@ h1 {
   text-align: center;
 }
 
+.row {
+  height: 500px;
+}
+
+
+.sep_line {
+  background-color: #54acc7;
+  height: 2px;
+  clear: both;
+}
+
 ul li {
   list-style-type: none;
+  text-overflow: auto;
 }
 
 .term {
@@ -25,11 +37,31 @@ ul li {
   display: inline-block
 }
 
-.border {
-    margin-top: 5px;
-    background-color: #54acc7;
-    height: 5px;
+.border_top {
+  margin-top: 5px;
+  background-color: #54acc7;
+  height: 5px;
 }
 
+.border_bottom {
+  clear: both;
+  background-color: #54acc7;
+  height: 5px;
+}
+nav {
+  float: left;
+  width: 200px;
+}
 
+.pic {
+  position: absolute;
+  margin-left: 100px;
+  width: 100px;
+  height: 75px;
+
+}
+.section {
+  clear: both;
+
+}
 

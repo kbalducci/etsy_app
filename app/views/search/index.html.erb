@@ -4,16 +4,29 @@
   <%= form_tag('/', method: 'get') do %>
     <%= search_field_tag('query') %>
     <div class='button'><%= submit_tag("Keyword Search") %></div>
-    <div class='border'></div>
 <% end %>
 </header>
+<div class='border_top'></div>
 <ul>
-  <% @items.each do |item| %>
-    <li><div class='term'>Item Name </div><div class='link'><a href='<%= item["url"] %>' > Item url </a></div><div class="item_name"><%= item["title"] %></div>
-        <p><div class='term'>Description: </div><div class='paragraph'><%= item["description"] %></div></p><br />
+  <div class='row'>
+    <% @items.each do |item| %>
+ <!--  <div class="container"> -->
+    <li >
+        <div class='col-md-4'><img class='pic' src="/images/etsy_holder.jpg"/></div>
+        <div class='col-md-8'
+        <div class='section'><div class='term'>Item Name </div>
+        <div class='link'><a href='<%= item["url"] %>' > Item url </a></div><div class="item_name"><%= item["title"] %></div>
+        <p><div class='term'>Description: </div><div class='paragraph'><%= raw item["description"] %></div></p><br />
         <div class='term'>Materials: </div><div class='materials'><%= item["materials"].to_s %></div><br />
         <div class='term'>Price: </div><div class='price'>$<%= item["price"] %></div><br />
         <hr/>
+        </div>
+        <div class='sep_line'></div>
     </li>
     <% end %>
+  </div>
 </ul>
+<div class='border_bottom' class='clearfix'></div>
+<footer>
+  <p>The term 'Etsy' is a trademark of Etsy, Inc. This application uses the Etsy API but is not endorsed or certified by Etsy, Inc.</p>
+</footer>
